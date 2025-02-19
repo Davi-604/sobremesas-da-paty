@@ -24,57 +24,57 @@
 
 @layer base {
     :root {
-        --background: 320 70% 96%; /* Quase branco com um toque rosado */
-        --foreground: 260 30% 20%; /* Roxo escuro */
-        --card: 320 70% 96%;
-        --card-foreground: 260 30% 20%;
-        --popover: 320 70% 96%;
-        --popover-foreground: 260 30% 20%;
-        --primary: 340 65% 40%; /* Rosa escuro */
-        --primary-foreground: 320 70% 96%;
-        --secondary: 330 50% 85%; /* Rosa claro/bege */
-        --secondary-foreground: 260 30% 20%;
-        --muted: 330 50% 85%;
-        --muted-foreground: 260 30% 30%;
-        --accent: 340 65% 40%;
-        --accent-foreground: 320 70% 96%;
-        --destructive: 340 65% 40%;
-        --destructive-foreground: 320 70% 96%;
-        --border: 330 40% 80%;
-        --input: 330 40% 80%;
-        --ring: 340 65% 40%;
+        --background: 40 30% 96%; /* Bege claro */
+        --foreground: 20 20% 20%; /* Marrom escuro */
+        --card: 40 30% 96%;
+        --card-foreground: 20 20% 20%;
+        --popover: 40 30% 96%;
+        --popover-foreground: 20 20% 20%;
+        --primary: 20 40% 55%; /* Bege médio */
+        --primary-foreground: 0 0% 100%;
+        --secondary: 10 40% 80%; /* Rosa claro semelhante ao #d3a399 */
+        --secondary-foreground: 20 20% 20%;
+        --muted: 10 40% 85%; /* Rosa mais suave */
+        --muted-foreground: 20 20% 30%;
+        --accent: 10 45% 75%; /* Rosa seco mais intenso */
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 50% 60%; /* Vermelho suave */
+        --destructive-foreground: 0 0% 100%;
+        --border: 10 35% 75%; /* Rosa pastel */
+        --input: 10 35% 75%;
+        --ring: 10 45% 75%;
         --radius: 0.5rem;
-        --chart-1: 340 65% 40%;
-        --chart-2: 260 30% 20%;
-        --chart-3: 330 50% 85%;
-        --chart-4: 320 70% 96%;
-        --chart-5: 260 30% 20%;
+        --chart-1: 20 40% 55%;
+        --chart-2: 20 20% 20%;
+        --chart-3: 10 40% 80%;
+        --chart-4: 40 30% 96%;
+        --chart-5: 20 20% 20%;
     }
 
     .dark {
-        --background: 260 30% 10%; /* Fundo roxo bem escuro */
-        --foreground: 0 0% 100%; /* Branco puro */
-        --card: 260 30% 12%;
+        --background: 40 15% 15%; /* Bege escuro */
+        --foreground: 0 0% 100%; /* Branco */
+        --card: 40 15% 18%;
         --card-foreground: 0 0% 100%;
-        --popover: 260 30% 12%;
+        --popover: 40 15% 18%;
         --popover-foreground: 0 0% 100%;
-        --primary: 340 60% 35%; /* Rosa mais fechado */
+        --primary: 30 30% 45%; /* Bege médio escuro */
         --primary-foreground: 0 0% 100%;
-        --secondary: 260 30% 18%; /* Um tom mais escuro de roxo */
+        --secondary: 10 35% 50%; /* Rosa seco fechado */
         --secondary-foreground: 0 0% 100%;
-        --muted: 260 30% 15%;
-        --muted-foreground: 0 0% 100%;
-        --accent: 340 50% 28%;
+        --muted: 10 30% 45%; /* Rosa queimado escuro */
+        --muted-foreground: 0 0% 80%;
+        --accent: 10 40% 50%; /* Rosa pastel */
         --accent-foreground: 0 0% 100%;
-        --destructive: 340 75% 55%; /* Vermelho mais claro */
+        --destructive: 0 40% 55%; /* Vermelho queimado mais suave */
         --destructive-foreground: 0 0% 100%;
-        --border: 260 30% 18%;
-        --input: 260 30% 18%;
-        --ring: 340 60% 35%;
-        --chart-1: 340 55% 30%;
+        --border: 10 30% 50%;
+        --input: 10 30% 50%;
+        --ring: 10 40% 50%;
+        --chart-1: 30 30% 45%;
         --chart-2: 0 0% 100%;
-        --chart-3: 330 50% 50%;
-        --chart-4: 320 50% 90%;
+        --chart-3: 10 35% 55%;
+        --chart-4: 40 20% 80%;
         --chart-5: 0 0% 100%;
     }
 }

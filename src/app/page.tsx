@@ -1,5 +1,7 @@
+import { HomeContainer } from '@/components/home/HomeContainer';
+
 const Page = () => {
-    return <div className="">...</div>;
+    return <HomeContainer />;
 };
 
 export default Page;
