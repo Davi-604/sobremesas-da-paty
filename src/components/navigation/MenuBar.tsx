@@ -19,7 +19,7 @@ export const MenuBar = () => {
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger>
-                <CgMenu className="size-7" />
+                <CgMenu className="size-10" />
             </SheetTrigger>
             <SheetContent className="bg-secondary">
                 <SheetHeader>

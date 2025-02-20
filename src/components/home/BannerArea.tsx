@@ -20,20 +20,19 @@ export const BannerArea = () => {
         <>
             {banners.length > 0 && (
                 <Slider
-                    dots
                     infinite={banners.length > 1}
-                    speed={500}
+                    speed={1000}
                     slidesToShow={1}
                     slidesToScroll={1}
                     autoplay
-                    autoplaySpeed={1000}
+                    autoplaySpeed={5000}
                 >
                     {banners.map((banner, index) => (
                         <div key={index}>
                             <img
                                 src={banner}
                                 alt={`Banner-${index}`}
-                                className="w-full h-[600px] object-cover"
+                                className="w-full h-[320px] object-cover lg:h-[600px]"
                             />
                         </div>
                     ))}
