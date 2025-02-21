@@ -27,8 +27,8 @@ export const Header = () => {
     return (
         <>
             <header
-                className={`bg-chart-3  w-full transition-opacity ease-in ${
-                    isScrolled ? 'opacity-80 fixed z-50' : 'opacity-100'
+                className={`bg-chart-3 fixed z-50 w-full transition-opacity ease-in ${
+                    isScrolled ? 'opacity-80 ' : 'opacity-100'
                 }`}
             >
                 <div className="flex items-center justify-between px-3 max-w-[1500px] mx-auto lg:justify-normal">

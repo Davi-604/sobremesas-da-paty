@@ -4,6 +4,7 @@ import './globals.css';
 import { MetadataProvider } from '@/components/default/MetadataProvider';
 import { ThemeProvider } from '@/components/themes/ThemeProvider';
 import { Header } from '@/components/navigation/Header';
+import { Footer } from '@/components/default/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
                 >
                     <Header />
                     {children}
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>

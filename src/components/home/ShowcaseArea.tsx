@@ -3,7 +3,7 @@ import { ShowcaseItem } from './ShowCaseiItem';
 
 export const ShowcaseArea = () => {
     return (
-        <div className="px-3 py-5 max-w-[1430px] mx-auto border-b-4 border-dashed border-primary">
+        <div className="px-3 mb-10 py-5 max-w-[1430px] mx-auto border-b-4 border-dashed border-primary">
             <h1 className="font-bold text-center text-3xl lg:text-4xl">
                 O'que nós fazemos?
             </h1>

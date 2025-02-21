@@ -17,7 +17,7 @@ export const BannerArea = () => {
     }, []);
 
     return (
-        <>
+        <div className="mt-[102px] lg:mt-[154px]">
             {banners.length > 0 && (
                 <Slider
                     infinite={banners.length > 1}
@@ -38,6 +38,6 @@ export const BannerArea = () => {
                     ))}
                 </Slider>
             )}
-        </>
+        </div>
     );
 };

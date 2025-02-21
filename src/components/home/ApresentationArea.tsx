@@ -8,7 +8,7 @@ export const ApresentationArea = () => {
                 Olá, somos a Adocica!
             </h1>
             <div className="flex flex-col items-center gap-3 md:flex-row">
-                <div className="max-w-[350px]  order-1 md:order-none lg:max-w-[500px] ">
+                <div className="max-w-[350px] order-1 md:order-none lg:max-w-[500px] ">
                     <img src="/bolo.png" className="w-full h-full object-cover" />
                 </div>
                 <p className="font-base italic text-center mt-10 max-w-[500px] mx-auto md:max-w-[600px] lg:text-xl lg:max-w-[800px] lg:text-left">

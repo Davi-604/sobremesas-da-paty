@@ -14,3 +14,17 @@ export const getProducts = async (category_id: number) => {
 
     return data as Product[];
 };
+
+export const getStandoutsProducts = async () => {
+    const { data, error } = await supabase
+        .from('products')
+        .select()
+        .limit(5)
+        .order('id', { ascending: true });
+
+    if (error) {
+        throw new Error(error.message);
+    }
+
+    return data as Product[];
+};
