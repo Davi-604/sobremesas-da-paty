@@ -14,7 +14,7 @@ export const HomeContainer = () => {
             <ApresentationArea />
             <ShowcaseArea />
             <StandOutsArea />
-            {/* <ColorsGrid /> */}
+            <ColorsGrid />
         </section>
     );
 };
