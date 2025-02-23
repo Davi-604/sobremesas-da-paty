@@ -9,7 +9,7 @@ export const MenuCard = ({ product, onClick }: Props) => {
     return (
         <div className="flex flex-col items-center gap-3 bg-card rounded-lg pb-4 px-2">
             <div
-                className="max-h-[200px] lg:max-h-[300px] w-full overflow-hidden rounded-lg cursor-pointer"
+                className="h-[200px] lg:h-[300px] w-full overflow-hidden rounded-lg cursor-pointer"
                 onClick={() => onClick(product)}
             >
                 <img

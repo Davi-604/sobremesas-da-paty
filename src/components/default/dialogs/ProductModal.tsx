@@ -27,8 +27,6 @@ export const ProductModal = ({ isOpen, onOpenChange, product }: Props) => {
                             speed={1000}
                             slidesToShow={1}
                             slidesToScroll={1}
-                            pauseOnDotsHover
-                            pauseOnHover
                             autoplay
                             autoplaySpeed={3000}
                         >

@@ -25,7 +25,7 @@ export const BannerArea = () => {
                     slidesToShow={1}
                     slidesToScroll={1}
                     autoplay
-                    autoplaySpeed={5000}
+                    autoplaySpeed={4000}
                 >
                     {banners.map((banner, index) => (
                         <div key={index}>
