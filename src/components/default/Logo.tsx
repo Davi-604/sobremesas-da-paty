@@ -1,4 +1,5 @@
 import { getWebsiteData } from '@/services/website';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 type Props = {
@@ -6,6 +7,8 @@ type Props = {
 };
 export const Logo = ({ small }: Props) => {
     const [logo, setLogo] = useState<string | null>(null);
+
+    const router = useRouter();
 
     const handleGetLogo = async () => {
         const req = await getWebsiteData();
@@ -20,6 +23,7 @@ export const Logo = ({ small }: Props) => {
         <>
             {logo && (
                 <img
+                    onClick={() => router.push('/')}
                     src={logo}
                     alt="Logo"
                     className={`max-w-[100px] lg:max-w-[150px] transition-all ease-in 

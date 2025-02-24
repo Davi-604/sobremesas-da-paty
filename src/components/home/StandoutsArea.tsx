@@ -2,7 +2,7 @@ import { getStandoutsProducts } from '@/services/products';
 import { Product } from '@/types/Product';
 import { useEffect, useState } from 'react';
 import { MenuCard } from '../menu/MenuCard';
-import { ProductModal } from '../default/dialogs/ProductModal';
+import { ProductModal } from '../menu/dialogs/ProductModal';
 
 export const StandOutsArea = () => {
     const [standOutsProducts, setStandOutsProducts] = useState<Product[]>([]);

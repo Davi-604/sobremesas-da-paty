@@ -29,7 +29,6 @@ export const MenuCard = ({ product, onClick }: Props) => {
             <div className="">
                 <DefaultButton
                     label="Eu quero!"
-                    variant="default"
                     onClick={() => onClick(product)}
                     small={window.innerWidth < 768}
                 />

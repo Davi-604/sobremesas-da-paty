@@ -1,5 +1,6 @@
 import { IconType } from 'react-icons';
 import { Button } from '../ui/button';
+import { useCartStore } from '@/stores/cart';
 
 type Props = {
     label: string;
@@ -8,6 +9,7 @@ type Props = {
     disabled?: boolean;
     Icon?: IconType;
     small?: boolean;
+    cart?: boolean;
 };
 export const DefaultButton = ({
     label,
@@ -16,21 +18,29 @@ export const DefaultButton = ({
     Icon,
     small,
     disabled,
+    cart,
 }: Props) => {
+    const cartProvider = useCartStore();
+
     return (
-        <Button
-            variant={variant}
-            onClick={() => onClick()}
-            className={`flex items-center gap-2 w-full
+        <div className="flex ">
+            <Button
+                variant={variant}
+                onClick={() => onClick()}
+                className={`flex items-center gap-2 w-full
                 ${small ? 'text-sm' : 'text-xl'}
             `}
-            disabled={disabled}
-            size={small ? 'sm' : 'lg'}
-        >
-            {Icon && (
-                <Icon strokeWidth={3} style={{ height: '1.2rem', width: '1.2rem' }} />
+                disabled={disabled}
+                size={small ? 'sm' : 'lg'}
+            >
+                {Icon && (
+                    <Icon strokeWidth={3} style={{ height: '1.2rem', width: '1.2rem' }} />
+                )}
+                {label}
+            </Button>
+            {cart && cartProvider.cart.length > 0 && (
+                <div className=" -mt-1 -ml-2 size-3 rounded-full bg-white"></div>
             )}
-            {label}
-        </Button>
+        </div>
     );
 };

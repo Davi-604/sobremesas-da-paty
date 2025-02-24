@@ -1,10 +1,13 @@
 import { Dialog, DialogClose, DialogContent, DialogHeader } from '@/components/ui/dialog';
 import { Product } from '@/types/Product';
-import { DefaultButton } from '../DefaultButton';
+import { DefaultButton } from '../../default/DefaultButton';
 import { FaCartPlus } from 'react-icons/fa';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { CartStaticQuantityHandler } from '@/components/cart/CartStaticQuantityHandler';
+import { useState } from 'react';
+import { useCartStore } from '@/stores/cart';
 
 type Props = {
     isOpen: boolean;
@@ -12,11 +15,20 @@ type Props = {
     product: Product;
 };
 export const ProductModal = ({ isOpen, onOpenChange, product }: Props) => {
+    const [quantity, setQuantity] = useState(0);
+
+    const cart = useCartStore();
+
     return (
-        <Dialog open={isOpen} onOpenChange={(value) => onOpenChange(value)}>
+        <Dialog
+            open={isOpen}
+            onOpenChange={(value) => {
+                onOpenChange(value), setQuantity(0);
+            }}
+        >
             <DialogContent
                 style={{ padding: '0px' }}
-                className="border-none overflow-y-scroll lg:overflow-hidden"
+                className="border-none overflow-y-scroll"
             >
                 {product.extra_images_urls.length > 0 && (
                     <div className="w-full h-[325px] overflow-x-hidden">
@@ -63,16 +75,21 @@ export const ProductModal = ({ isOpen, onOpenChange, product }: Props) => {
                     <h3 className="text-sm text-muted-foreground font-semibold">
                         {product.description}
                     </h3>
-                    <DefaultButton
-                        label="Adicionar ao carrinho"
-                        onClick={() => {}}
-                        Icon={FaCartPlus}
-                        variant="default"
+                    <CartStaticQuantityHandler
+                        product={product}
+                        quantity={quantity}
+                        setQuantity={setQuantity}
                     />
                     <DefaultButton
-                        label="Comprar agora!"
-                        onClick={() => {}}
-                        variant="secondary"
+                        label="Adicionar ao carrinho"
+                        onClick={() => {
+                            cart.setCart(product, quantity),
+                                onOpenChange(false),
+                                setQuantity(0);
+                        }}
+                        Icon={FaCartPlus}
+                        variant="default"
+                        disabled={quantity === 0}
                     />
                 </div>
             </DialogContent>

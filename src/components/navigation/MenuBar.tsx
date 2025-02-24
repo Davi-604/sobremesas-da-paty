@@ -7,10 +7,13 @@ import { NavItem } from './NavItem';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { ThemeToggle } from '../themes/ThemeToggle';
+import { DefaultButton } from '../default/DefaultButton';
+import { FaShoppingCart } from 'react-icons/fa';
 
 export const MenuBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathName = usePathname();
+    const router = useRouter();
 
     useEffect(() => {
         setIsOpen(false);
@@ -29,6 +32,15 @@ export const MenuBar = () => {
                     {sections.map((section, index) => (
                         <NavItem key={index} section={section} />
                     ))}
+                    <div className="mt-10">
+                        <DefaultButton
+                            label="Carrinho de compras"
+                            onClick={() => router.push('/cart')}
+                            Icon={FaShoppingCart}
+                            small
+                            variant="destructive"
+                        />
+                    </div>
                 </div>
                 <ThemeToggle bottomPosition="10px" rightPosition="10px" />
             </SheetContent>
