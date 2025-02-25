@@ -7,11 +7,11 @@ type Props = {
 };
 export const MenuCard = ({ product, onClick }: Props) => {
     return (
-        <div className="flex flex-col items-center gap-3 bg-card rounded-lg pb-4 px-2">
-            <div
-                className="h-[200px] lg:h-[300px] w-full overflow-hidden rounded-lg cursor-pointer"
-                onClick={() => onClick(product)}
-            >
+        <div
+            className="flex flex-col items-center gap-3 bg-card rounded-lg pb-4"
+            onClick={() => onClick(product)}
+        >
+            <div className="h-[200px] lg:h-[270px] w-full overflow-hidden rounded-lg cursor-pointer">
                 <img
                     src={product.thumb_image_url}
                     style={{ padding: '0px -8px' }}
@@ -25,13 +25,6 @@ export const MenuCard = ({ product, onClick }: Props) => {
                 {product.price === 0
                     ? 'Preço a combinar'
                     : `R$ ${product.price?.toFixed(2).replace('.', ',')}`}
-            </div>
-            <div className="">
-                <DefaultButton
-                    label="Eu quero!"
-                    onClick={() => onClick(product)}
-                    small={window.innerWidth < 768}
-                />
             </div>
         </div>
     );

@@ -1,7 +1,10 @@
+import { useRouter } from 'next/navigation';
 import { DefaultButton } from '../default/DefaultButton';
 import { ShowcaseItem } from './ShowCaseiItem';
 
 export const ShowcaseArea = () => {
+    const router = useRouter();
+
     return (
         <div className="px-3 mb-10 py-5 max-w-[1430px] mx-auto border-b-4 border-dashed border-primary">
             <h1 className="font-bold text-center text-3xl lg:text-4xl">
@@ -16,7 +19,7 @@ export const ShowcaseArea = () => {
             <div className="max-w-[500px] mx-auto mt-10">
                 <DefaultButton
                     label="Conheça nossas opções!"
-                    onClick={() => {}}
+                    onClick={() => router.push('/menu')}
                     variant="default"
                 />
             </div>

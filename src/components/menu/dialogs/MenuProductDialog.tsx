@@ -8,16 +8,25 @@ import 'slick-carousel/slick/slick-theme.css';
 import { CartStaticQuantityHandler } from '@/components/cart/CartStaticQuantityHandler';
 import { useState } from 'react';
 import { useCartStore } from '@/stores/cart';
+import { WarningDialog } from '@/components/default/dialogs/WarningDialog';
 
 type Props = {
     isOpen: boolean;
     onOpenChange: (value: boolean) => void;
     product: Product;
 };
-export const ProductModal = ({ isOpen, onOpenChange, product }: Props) => {
+export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
     const [quantity, setQuantity] = useState(0);
+    const [isWarningDialogOpen, setIsWarningDialogOpen] = useState(false);
 
     const cart = useCartStore();
+
+    const handlePushToCart = (product: Product) => {
+        cart.setCart(product, quantity);
+        onOpenChange(false);
+        setIsWarningDialogOpen(true);
+        setQuantity(0);
+    };
 
     return (
         <Dialog
@@ -26,10 +35,7 @@ export const ProductModal = ({ isOpen, onOpenChange, product }: Props) => {
                 onOpenChange(value), setQuantity(0);
             }}
         >
-            <DialogContent
-                style={{ padding: '0px' }}
-                className="border-none overflow-y-scroll"
-            >
+            <DialogContent style={{ padding: '0px' }} className="border-none">
                 {product.extra_images_urls.length > 0 && (
                     <div className="w-full h-[325px] overflow-x-hidden">
                         <Slider
@@ -82,17 +88,21 @@ export const ProductModal = ({ isOpen, onOpenChange, product }: Props) => {
                     />
                     <DefaultButton
                         label="Adicionar ao carrinho"
-                        onClick={() => {
-                            cart.setCart(product, quantity),
-                                onOpenChange(false),
-                                setQuantity(0);
-                        }}
+                        onClick={() => handlePushToCart(product)}
                         Icon={FaCartPlus}
                         variant="default"
                         disabled={quantity === 0}
                     />
                 </div>
             </DialogContent>
+
+            <WarningDialog
+                isOpen={isWarningDialogOpen}
+                onOpenChange={setIsWarningDialogOpen}
+                message="Sobremesa adicionada ao carrinho!"
+                image="/doces-rosas.png"
+                cart
+            />
         </Dialog>
     );
 };

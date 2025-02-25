@@ -2,7 +2,7 @@ import { getStandoutsProducts } from '@/services/products';
 import { Product } from '@/types/Product';
 import { useEffect, useState } from 'react';
 import { MenuCard } from '../menu/MenuCard';
-import { ProductModal } from '../menu/dialogs/ProductModal';
+import { MenuProductDialog } from '../menu/dialogs/MenuProductDialog';
 
 export const StandOutsArea = () => {
     const [standOutsProducts, setStandOutsProducts] = useState<Product[]>([]);
@@ -39,7 +39,7 @@ export const StandOutsArea = () => {
                 ))}
             </div>
             {selectedProduct && (
-                <ProductModal
+                <MenuProductDialog
                     isOpen={isProductDialogOpen}
                     onOpenChange={setIsProductDialogOpen}
                     product={selectedProduct}

@@ -26,7 +26,7 @@ export const CartCheckoutArea = ({ cart }: Props) => {
                 </div>
                 {cart.find((item) => item.product.price === 0) && (
                     <div className="text-xs -mt-3 p-2 rounded-md bg-muted">
-                        Para as sobremesas com os preços a combinar, a nossa equipe
+                        Para as sobremesas com os preços a combinar, o nosso atendimento
                         conversará com você a respeito do pedido para obter o melhor
                         preço.
                     </div>
