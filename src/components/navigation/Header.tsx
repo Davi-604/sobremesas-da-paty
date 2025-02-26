@@ -16,18 +16,22 @@ export const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
+            if (typeof window !== 'undefined' && window.scrollY > 50) {
                 setIsScrolled(true);
+                return;
             } else {
                 setIsScrolled(false);
+                return;
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [window.scrollY]);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [typeof window !== 'undefined' && window.scrollY]);
 
     return (
         <>
@@ -48,7 +52,9 @@ export const Header = () => {
                             label="Carrinho"
                             onClick={() => router.push('/cart')}
                             Icon={FaShoppingCart}
-                            small={window.innerWidth < 768}
+                            small={
+                                typeof window !== 'undefined' && window.innerWidth < 768
+                            }
                             variant="destructive"
                             cart
                         />

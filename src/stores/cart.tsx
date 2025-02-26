@@ -8,7 +8,10 @@ type CartState = {
 };
 export const useCartStore = create<CartState>((set) => ({
     cart: (() => {
-        const savedCart = localStorage.getItem('cart');
+        let savedCart: string | null = '';
+        if (typeof window !== 'undefined') {
+            savedCart = localStorage.getItem('cart');
+        }
 
         return savedCart ? JSON.parse(savedCart) : [];
     })(),
@@ -33,7 +36,9 @@ export const useCartStore = create<CartState>((set) => ({
                 newCart = newCart.filter((item) => item.product.id !== product.id);
             }
 
-            localStorage.setItem('cart', JSON.stringify(newCart));
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('cart', JSON.stringify(newCart));
+            }
 
             return { ...state, cart: newCart };
         }),

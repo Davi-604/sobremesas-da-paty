@@ -31,7 +31,7 @@ export const CartProductItem = ({ cartProduct, setCart }: Props) => {
                     product={cartProduct.product}
                     quantity={cartProduct.quantity}
                     setCart={setCart}
-                    small={window.innerWidth < 768}
+                    small={typeof window !== 'undefined' && window.innerWidth < 768}
                 />
             </div>
         </div>
