@@ -34,7 +34,7 @@ export const MenuContainer = () => {
     }, [currentCategory]);
 
     return (
-        <div className="max-w-[1200px] mx-auto px-3 py-10 mt-[102px] lg:mt-[154px]">
+        <section className="max-w-[1200px] mx-auto px-3 py-10 mt-[102px] lg:mt-[154px]">
             <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold lg:text-3xl">
                     {currentCategory?.name}
@@ -70,6 +70,6 @@ export const MenuContainer = () => {
                     product={currentProduct}
                 />
             )}
-        </div>
+        </section>
     );
 };

@@ -15,7 +15,7 @@ export const WarningDialog = ({ isOpen, onOpenChange, message, image, cart }: Pr
     return (
         <Dialog open={isOpen} onOpenChange={(value) => onOpenChange(value)}>
             <DialogContent className="flex flex-col justify-center text-center  p-5">
-                {image && <img src={image} className="w-1/2 mx-auto" />}
+                {image && <img src={image} className="size-[200px] mb-10 mx-auto" />}
                 <div className={`text-2xl font-bold ${!image && 'mt-10'}`}>{message}</div>
                 {cart && (
                     <div className="mt-5 flex flex-col max-w-[300px] mx-auto justify-center gap-5">
