@@ -11,6 +11,12 @@
     --background-end-rgb: 255, 255, 255;
 }
 
+.slick-prev:before,
+.slick-next:before {
+    background-color: #000;
+    border-radius: 50%;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: 255, 255, 255;
@@ -25,6 +31,11 @@
         justify-content: center;
         transition: all 0.2s ease-in;
         align-items: center;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        background-color: none;
+        border-radius: none;
     }
 }
 

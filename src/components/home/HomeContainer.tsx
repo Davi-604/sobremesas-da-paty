@@ -4,6 +4,7 @@ import { Footer } from '../default/Footer';
 import { ColorsGrid } from '../tmp/ColorsGrid';
 import { ApresentationArea } from './ApresentationArea';
 import { BannerArea } from './BannerArea';
+import { ClientsAvaliations } from './ClientsAvaliations';
 import { ShowcaseArea } from './ShowcaseArea';
 import { StandOutsArea } from './StandoutsArea';
 
@@ -14,7 +15,8 @@ export const HomeContainer = () => {
             <ApresentationArea />
             <StandOutsArea />
             <ShowcaseArea />
-            <ColorsGrid />
+            <ClientsAvaliations />
+            {/* <ColorsGrid /> */}
         </section>
     );
 };

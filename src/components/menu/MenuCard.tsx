@@ -11,17 +11,17 @@ export const MenuCard = ({ product, onClick }: Props) => {
             className="flex flex-col items-center gap-3 bg-card rounded-lg pb-2"
             onClick={() => onClick(product)}
         >
-            <div className="h-[200px] lg:h-[270px] w-full overflow-hidden rounded-lg cursor-pointer">
+            <div className="h-[200px] md:h-[270px] w-full overflow-hidden rounded-lg cursor-pointer">
                 <img
                     src={product.thumb_image_url}
                     style={{ padding: '0px -8px' }}
                     className="h-full w-full rounded-lg object-cover mb-5 transition-transform duration-300 ease-in hover:scale-125 "
                 />
             </div>
-            <div className="text-center font-bold text-lg text-primary dark:text-chart-3 font-serif italic  lg:text-2xl">
+            <div className="text-center font-bold text-lg text-primary dark:text-chart-3 font-serif italic  md:text-2xl">
                 {product.name}
             </div>
-            <div className=" font-semibold lg:text-xl">
+            <div className=" font-semibold md:text-xl">
                 {product.price === 0
                     ? 'Preço a combinar'
                     : `R$ ${product.price?.toFixed(2).replace('.', ',')}`}

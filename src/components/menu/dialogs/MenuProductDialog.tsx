@@ -37,7 +37,7 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
         >
             <DialogContent style={{ padding: '0px' }} className="border-none">
                 {product.extra_images_urls.length > 0 && (
-                    <div className="w-full h-[325px] overflow-x-hidden">
+                    <div className="w-full h-[325px] overflow-x-hidden lg:h-[400px]">
                         <Slider
                             infinite
                             dots
@@ -50,14 +50,14 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
                         >
                             <img
                                 src={product.thumb_image_url}
-                                className="w-full h-[300px] object-cover rounded-t-lg"
+                                className="w-full h-[300px] object-cover rounded-t-lg lg:h-[375px]"
                             />
                             {product.extra_images_urls.map((image, index) => (
                                 <img
                                     key={index}
                                     src={image}
                                     alt={`extra-image-${index}`}
-                                    className="w-full h-[300px] object-cover rounded-t-lg"
+                                    className="w-full h-[300px] object-cover rounded-t-lg lg:h-[375px]"
                                 />
                             ))}
                         </Slider>
