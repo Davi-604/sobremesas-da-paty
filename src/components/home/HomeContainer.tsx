@@ -1,7 +1,5 @@
 'use client';
 
-import { Footer } from '../default/Footer';
-import { ColorsGrid } from '../tmp/ColorsGrid';
 import { ApresentationArea } from './ApresentationArea';
 import { BannerArea } from './BannerArea';
 import { ClientsAvaliations } from './ClientsAvaliations';
@@ -16,7 +14,6 @@ export const HomeContainer = () => {
             <StandOutsArea />
             <ShowcaseArea />
             <ClientsAvaliations />
-            {/* <ColorsGrid /> */}
         </section>
     );
 };
