@@ -3,7 +3,7 @@ import { SocialMediaItem } from '../default/SocialMediaItem';
 
 export const ApresentationArea = () => {
     return (
-        <div className="my-10 py-8 px-3 border-y-4 border-primary border-dashed max-w-[1430px] mx-auto">
+        <div className="my-5 py-10 px-3 border-y-4 border-primary border-dashed max-w-[1430px] mx-auto">
             <h1 className="font-bold text-center text-3xl lg:text-4xl lg:-mb-7">
                 Olá, somos a Adocica!
             </h1>

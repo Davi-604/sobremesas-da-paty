@@ -32,11 +32,11 @@ export const Header = () => {
     return (
         <>
             <header
-                className={`bg-chart-3 fixed top-0  z-50 w-full transition-opacity ease-in  ${
+                className={`bg-chart-3 fixed top-0 z-50 w-full transition-opacity ease-in  ${
                     isScrolled ? 'opacity-80 ' : 'opacity-100'
                 }`}
             >
-                <div className="flex items-center px-3 max-w-[1500px] mx-auto">
+                <div className="flex items-center px-3 max-w-[1200px] mx-auto">
                     <div className="flex-1 lg:flex-none">
                         <Logo small={isScrolled} />
                     </div>

@@ -10,7 +10,7 @@ export const Footer = () => {
     return (
         <footer className="bg-primary dark:bg-chart-1 text-sm text-white">
             <div
-                className="mb-5 h-[150px]"
+                className="mb-5 h-[177px]"
                 style={{
                     backgroundImage: 'url(/calda-chocolate.png)',
                     backgroundPosition: 'center',

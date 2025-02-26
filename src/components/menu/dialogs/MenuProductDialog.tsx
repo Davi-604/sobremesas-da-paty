@@ -73,7 +73,7 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
                     <h1 className="text-center font-bold text-2xl text-primary dark:text-chart-3 font-serif italic  md:text-3xl">
                         {product.name}
                     </h1>
-                    <h2 className="text-2xl font-serif italic font-bold">
+                    <h2 className="text-2xl font-bold">
                         {product.price === 0
                             ? 'Preço a combinar'
                             : `R$ ${product.price?.toFixed(2).replace('.', ',')}`}

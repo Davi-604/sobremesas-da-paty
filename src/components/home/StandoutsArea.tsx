@@ -25,11 +25,11 @@ export const StandOutsArea = () => {
     }, []);
 
     return (
-        <div className="px-3 mb-10 py-5 max-w-[1430px] mx-auto border-b-4 border-dashed border-primary">
+        <div className="px-3 mb-5 py-16 max-w-[1430px] mx-auto border-b-4 border-dashed border-primary">
             <h1 className="font-bold text-center text-3xl lg:text-4xl">
                 Destaques do Momento
             </h1>
-            <div className="mt-10 grid grid-cols-2 justify-center gap-5 lg:grid-cols-4">
+            <div className="mt-10 grid grid-cols-2  gap-5 lg:grid-cols-4">
                 {standOutsProducts.map((product, index) => (
                     <MenuCard
                         product={product}

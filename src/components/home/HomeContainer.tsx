@@ -12,8 +12,8 @@ export const HomeContainer = () => {
         <section className="overflow-hidden">
             <BannerArea />
             <ApresentationArea />
-            <ShowcaseArea />
             <StandOutsArea />
+            <ShowcaseArea />
             <ColorsGrid />
         </section>
     );

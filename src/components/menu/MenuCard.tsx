@@ -8,7 +8,7 @@ type Props = {
 export const MenuCard = ({ product, onClick }: Props) => {
     return (
         <div
-            className="flex flex-col items-center gap-3 bg-card rounded-lg pb-4"
+            className="flex flex-col items-center gap-3 bg-card rounded-lg pb-2"
             onClick={() => onClick(product)}
         >
             <div className="h-[200px] lg:h-[270px] w-full overflow-hidden rounded-lg cursor-pointer">
@@ -21,7 +21,7 @@ export const MenuCard = ({ product, onClick }: Props) => {
             <div className="text-center font-bold text-lg text-primary dark:text-chart-3 font-serif italic  lg:text-2xl">
                 {product.name}
             </div>
-            <div className="font-serif font-semibold lg:text-lg">
+            <div className=" font-semibold lg:text-xl">
                 {product.price === 0
                     ? 'Preço a combinar'
                     : `R$ ${product.price?.toFixed(2).replace('.', ',')}`}
