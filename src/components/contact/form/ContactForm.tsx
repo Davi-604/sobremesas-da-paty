@@ -29,18 +29,24 @@ export const ContactForm = () => {
         setLoading(true);
         try {
             const templateParams = {
-                name: data.name,
+                from_name: data.name,
                 email: data.email,
-                cause: data.cause,
+                cause: `${data.cause.charAt(0).toUpperCase()}${data.cause.slice(1)}`,
                 message: data.message,
             };
 
-            const res = await emailjs.send('', '', templateParams, '');
+            const res = await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+                templateParams,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+            );
 
             setIsWarningDialogOpen(true);
             setThereMailError(false);
             console.log(res.text);
         } catch (err) {
+            console.log(err);
             setIsWarningDialogOpen(true);
             setThereMailError(true);
         }
@@ -125,7 +131,7 @@ export const ContactForm = () => {
                     image="/email-enviado.png"
                     isOpen={isWarningDialogOpen}
                     onOpenChange={setIsWarningDialogOpen}
-                    message="Sua mensagem foi enviada com sucesso, em breve entraremos em contato."
+                    message="Sua mensagem foi enviada com sucesso!"
                 />
             )}
         </Form>

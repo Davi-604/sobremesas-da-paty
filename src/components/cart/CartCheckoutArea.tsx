@@ -1,10 +1,14 @@
 import { CartItem } from '@/types/CartItem';
 import { DefaultButton } from '../default/DefaultButton';
+import { CartCheckoutDialog } from './dialogs/CartCheckoutDialog';
+import { useState } from 'react';
 
 type Props = {
     cart: CartItem[];
 };
 export const CartCheckoutArea = ({ cart }: Props) => {
+    const [isCheckoutDialogOpen, setIsCheckoutDialogOpen] = useState(false);
+
     return (
         <div className="mt-10 p-5 rounded-lg bg-popover max-w-[500px] mx-auto">
             <div className="text-2xl font-bold mb-5 lg:text-3xl">Resumo</div>
@@ -31,8 +35,16 @@ export const CartCheckoutArea = ({ cart }: Props) => {
                         preço.
                     </div>
                 )}
-                <DefaultButton label="Finalizar compra" onClick={() => {}} />
+                <DefaultButton
+                    label="Finalizar compra"
+                    onClick={() => setIsCheckoutDialogOpen(true)}
+                />
             </div>
+
+            <CartCheckoutDialog
+                isOpen={isCheckoutDialogOpen}
+                onOpenChange={setIsCheckoutDialogOpen}
+            />
         </div>
     );
 };

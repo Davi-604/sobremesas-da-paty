@@ -35,7 +35,10 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
                 onOpenChange(value), setQuantity(0);
             }}
         >
-            <DialogContent style={{ padding: '0px' }} className="border-none">
+            <DialogContent
+                style={{ padding: '0px' }}
+                className="border-none overflow-y-scroll h-full lg:overflow-auto lg:h-auto"
+            >
                 {product.extra_images_urls.length > 0 && (
                     <div className="w-full h-[325px] overflow-x-hidden lg:h-[400px]">
                         <Slider

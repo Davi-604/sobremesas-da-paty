@@ -22,11 +22,11 @@ export const ContactSelectField = ({ field }: Props) => {
                     <SelectValue placeholder="Selecione o motivo do contato" />
                 </SelectTrigger>
                 <SelectContent className="font-semibold">
-                    <SelectItem value="question">Dúvida</SelectItem>
-                    <SelectItem value="sugestion">Sugestão</SelectItem>
-                    <SelectItem value="compliment">Elogio</SelectItem>
-                    <SelectItem value="sysProblem">Problemas no site</SelectItem>
-                    <SelectItem value="other">Outro</SelectItem>
+                    <SelectItem value="duvida">Dúvida</SelectItem>
+                    <SelectItem value="sugestao">Sugestão</SelectItem>
+                    <SelectItem value="elogio">Elogio</SelectItem>
+                    <SelectItem value="problemas-site">Problemas no site</SelectItem>
+                    <SelectItem value="outro">Outro</SelectItem>
                 </SelectContent>
             </Select>
             <FormMessage className="text-yellow-500" />

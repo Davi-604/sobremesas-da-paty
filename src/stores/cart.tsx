@@ -5,6 +5,7 @@ import { create } from 'zustand';
 type CartState = {
     cart: CartItem[];
     setCart: (product: Product, quantity: number) => void;
+    clearCart: () => void;
 };
 export const useCartStore = create<CartState>((set) => ({
     cart: (() => {
@@ -42,4 +43,5 @@ export const useCartStore = create<CartState>((set) => ({
 
             return { ...state, cart: newCart };
         }),
+    clearCart: () => set({ cart: [] }),
 }));
