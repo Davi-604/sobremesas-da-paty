@@ -8,6 +8,8 @@ import { NavArea } from './NavArea';
 import { DefaultButton } from '../default/DefaultButton';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '@/animations/fadeIn';
 
 export const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +42,12 @@ export const Header = () => {
                     isScrolled ? 'opacity-80 ' : 'opacity-100'
                 }`}
             >
-                <div className="flex items-center px-3 max-w-[1200px] mx-auto">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeInUp}
+                    className="flex items-center px-3 max-w-[1200px] mx-auto"
+                >
                     <div className="flex-1 lg:flex-none">
                         <Logo small={isScrolled} />
                     </div>
@@ -62,7 +69,7 @@ export const Header = () => {
                     <div className=" lg:hidden">
                         <MenuBar />
                     </div>
-                </div>
+                </motion.div>
             </header>
             <div className="hidden lg:block">
                 <ThemeToggle topPosition="20px" rightPosition="20px" />

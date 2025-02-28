@@ -9,11 +9,19 @@ import { DefaultButton } from '@/components/default/DefaultButton';
 import emailjs from 'emailjs-com';
 import { WarningDialog } from '@/components/default/dialogs/WarningDialog';
 import { ContactSelectField } from './ContactSelectField';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { fadeInLeft, fadeInRight } from '@/animations/fadeIn';
 
 export const ContactForm = () => {
     const [loading, setLoading] = useState(false);
     const [isWarningDialogOpen, setIsWarningDialogOpen] = useState(false);
     const [ThereMailError, setThereMailError] = useState(false);
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
 
     const form = useForm<z.infer<typeof contactSchema>>({
         resolver: zodResolver(contactSchema),
@@ -55,10 +63,16 @@ export const ContactForm = () => {
     return (
         <Form {...form}>
             <form
+                ref={ref}
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="flex flex-col gap-5 md:flex-row"
             >
-                <div className="flex w-full flex-col justify-between gap-5 ">
+                <motion.div
+                    initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={fadeInLeft}
+                    className="flex w-full flex-col justify-between gap-5 "
+                >
                     <FormField
                         name="name"
                         control={form.control}
@@ -93,8 +107,13 @@ export const ContactForm = () => {
                         control={form.control}
                         render={({ field }) => <ContactSelectField field={field} />}
                     />
-                </div>
-                <div className="flex w-full flex-col gap-5">
+                </motion.div>
+                <motion.div
+                    initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={fadeInRight}
+                    className="flex w-full flex-col gap-5"
+                >
                     <FormField
                         name="message"
                         control={form.control}
@@ -116,7 +135,7 @@ export const ContactForm = () => {
                         disabled={loading}
                         variant="secondary"
                     />
-                </div>
+                </motion.div>
             </form>
             {ThereMailError && (
                 <WarningDialog

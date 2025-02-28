@@ -17,7 +17,7 @@ export const BannerArea = () => {
     }, []);
 
     return (
-        <div className="mt-[102px] lg:mt-[154px]">
+        <div className="mt-[102px] lg:mt-[154px] h-[117px] lg:h-[570px]">
             {banners.length > 0 && (
                 <Slider
                     infinite={banners.length > 1}
@@ -32,7 +32,7 @@ export const BannerArea = () => {
                             <img
                                 src={banner}
                                 alt={`Banner-${index}`}
-                                className="w-full h-[320px] object-cover lg:h-[600px]"
+                                className="w-full h-full object-cover"
                             />
                         </div>
                     ))}

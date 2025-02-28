@@ -9,8 +9,16 @@ import { MenuCard } from './MenuCard';
 import { MenuProductDialog } from './dialogs/MenuProductDialog';
 import { MenuCardSkeleton } from '../skeletons/MenuCardSkeleton';
 import { TbCakeOff } from 'react-icons/tb';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { fadeInRight, fadeInUp } from '@/animations/fadeIn';
 
 export const MenuContainer = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
+
     const [currentCategory, setCurrentCategory] = useState<Category>();
     const [products, setProducts] = useState<Product[]>([]);
     const [isProductDialogOpen, setIsProductDialogOpen] = useState(false);
@@ -43,7 +51,13 @@ export const MenuContainer = () => {
             </div>
             {loading && products.length === 0 && <MenuCardSkeleton />}
             {!loading && products.length > 0 && (
-                <div className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+                <motion.div
+                    initial="hidden"
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={fadeInUp}
+                    ref={ref}
+                    className="mt-10 grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5"
+                >
                     {products.map((product) => (
                         <MenuCard
                             product={product}
@@ -52,7 +66,7 @@ export const MenuContainer = () => {
                             }}
                         />
                     ))}
-                </div>
+                </motion.div>
             )}
             {!loading && products.length === 0 && (
                 <div className="flex flex-col justify-center items-center opacity-60 gap-5 my-20">
