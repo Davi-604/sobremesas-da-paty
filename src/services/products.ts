@@ -19,7 +19,8 @@ export const getStandoutsProducts = async () => {
     const { data, error } = await supabase
         .from('products')
         .select()
-        .limit(5)
+        .limit(4)
+        .order('standout', { ascending: false })
         .order('id', { ascending: true });
 
     if (error) {
