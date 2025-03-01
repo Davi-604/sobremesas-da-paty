@@ -48,7 +48,7 @@ export const Header = () => {
                     variants={fadeInUp}
                     className="flex items-center px-3 max-w-[1200px] mx-auto"
                 >
-                    <div className="flex-1 lg:flex-none">
+                    <div className="flex-1 py-2 lg:flex-none">
                         <Logo small={isScrolled} />
                     </div>
                     <div className="hidden mr-32 lg:block">

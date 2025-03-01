@@ -50,19 +50,23 @@ export const MenuContainer = () => {
 
     return (
         <section className="max-w-[1200px] mx-auto px-3 py-10 mt-[102px] lg:mt-[154px]">
-            <div className="flex items-center mb-5 mx-3">
-                <FaSearch className="-mr-7 z-50 " />
-                <Input
-                    value={searchField}
-                    onChange={(e) => setSearchField(e.target.value)}
-                    placeholder="Buscar sobremesas"
-                    className="pl-10 w-3/4 transition-all ease-in-out duration-300 focus:w-full md:w-1/2"
-                />
-            </div>
-            {searchField.trim() !== '' && (
-                <div className="my-5 font-semibold text-lg">
-                    Pesquisando por: <b>{searchField}</b>
-                </div>
+            {!loading && products.length === 0 && (
+                <>
+                    <div className="flex items-center mb-5 mx-3">
+                        <FaSearch className="-mr-7 z-50 " />
+                        <Input
+                            value={searchField}
+                            onChange={(e) => setSearchField(e.target.value)}
+                            placeholder="Buscar sobremesas"
+                            className="pl-10 w-3/4 transition-all ease-in-out duration-300 focus:w-full md:w-1/2"
+                        />
+                    </div>
+                    {searchField.trim() !== '' && (
+                        <div className="my-5 font-semibold text-lg">
+                            Pesquisando por: <b>{searchField}</b>
+                        </div>
+                    )}
+                </>
             )}
             <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold lg:text-3xl">

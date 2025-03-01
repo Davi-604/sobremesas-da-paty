@@ -23,7 +23,7 @@ export const BannerArea = () => {
 
     return (
         <>
-            <div className="mt-[102px] lg:mt-[154px] ">
+            <div className="mt-[116px] lg:mt-[166px]  ">
                 {banners.length > 0 && !loading && (
                     <Slider
                         infinite={banners.length > 1}

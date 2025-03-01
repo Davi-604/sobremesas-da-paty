@@ -18,7 +18,7 @@ export const Logo = ({ small }: Props) => {
         const req = await getWebsiteData();
         setLoading(false);
 
-        setLogo(req.icon);
+        setLogo(req.logo);
     };
 
     useEffect(() => {
@@ -32,8 +32,8 @@ export const Logo = ({ small }: Props) => {
                     onClick={() => router.push('/')}
                     src={logo}
                     alt="Logo"
-                    className={`max-w-[100px] lg:max-w-[150px] transition-all ease-in 
-                    ${small ? 'max-w-[70px] lg:max-w-[80px]' : ''}`}
+                    className={`size-[100px] lg:size-[150px] transition-all ease-in rounded-full object-cover cursor-pointer 
+                    ${small ? 'size-[70px] lg:size-[80px]' : ''}`}
                 />
             )}
             {loading && !logo && <LogoSkeleton />}
