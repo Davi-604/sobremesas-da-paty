@@ -9,7 +9,7 @@ import { Footer } from '@/components/default/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Adocica',
+    title: 'Sobremesas da Paty',
 };
 
 export default function RootLayout({

@@ -32,7 +32,7 @@ export const Logo = ({ small }: Props) => {
                     onClick={() => router.push('/')}
                     src={logo}
                     alt="Logo"
-                    className={`size-[100px] lg:size-[150px] transition-all ease-in rounded-full object-cover cursor-pointer 
+                    className={`size-[100px] lg:size-[150px] transition-all ease-in object-cover cursor-pointer 
                     ${small ? 'size-[70px] lg:size-[80px]' : ''}`}
                 />
             )}

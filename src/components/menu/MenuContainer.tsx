@@ -50,7 +50,7 @@ export const MenuContainer = () => {
 
     return (
         <section className="max-w-[1200px] mx-auto px-3 py-10 mt-[102px] lg:mt-[154px]">
-            {!loading && products.length === 0 && (
+            {!loading && products.length !== 0 && (
                 <>
                     <div className="flex items-center mb-5 mx-3">
                         <FaSearch className="-mr-7 z-50 " />
