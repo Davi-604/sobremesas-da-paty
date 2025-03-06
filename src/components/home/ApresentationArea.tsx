@@ -30,7 +30,11 @@ export const ApresentationArea = () => {
                     variants={fadeInLeft}
                     className="max-w-[350px] order-1 md:order-none lg:max-w-[500px] "
                 >
-                    <img src="/bolo.png" className="w-full h-full object-cover" />
+                    <img
+                        loading="lazy"
+                        src="/bolo.png"
+                        className="w-full h-full object-cover"
+                    />
                 </motion.div>
                 <motion.div
                     initial="hidden"
@@ -43,7 +47,7 @@ export const ApresentationArea = () => {
                     caseiras são feitas com todo carinho da minha casa para a sua mesa!
                     <br />
                     <br />
-                    Nosso compromisso é oferecer um ambiente acolhedor, atendimento
+                    Nosso compromisso é oferecer qualidade nas sobremesas, atendimento
                     impecável e, claro, sabores que encantam.
                 </motion.div>
             </div>
@@ -59,18 +63,8 @@ export const ApresentationArea = () => {
                 <div className="flex flex-col justify-center gap-5 mt-5 flex-wrap md:flex-row ">
                     <SocialMediaItem
                         Icon={FaInstagram}
-                        href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        label={'@patriciamagalhaesmedeiros'}
-                    />
-                    <SocialMediaItem
-                        Icon={FaInstagram}
-                        href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        label={'@patriciamagalhaesmedeiros'}
-                    />
-                    <SocialMediaItem
-                        Icon={FaInstagram}
-                        href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        label={'@patriciamagalhaesmedeiros'}
+                        href="https://www.instagram.com/sobremesas.dapaty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        label={'@sobremesas.dapaty'}
                     />
                 </div>
             </motion.div>

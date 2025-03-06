@@ -14,6 +14,7 @@ export const CartProductItem = ({ cartProduct, setCart }: Props) => {
         <div className="flex items-center border-b-2 py-5  ">
             <div className="flex-1">
                 <img
+                    loading="lazy"
                     src={cartProduct.product.thumb_image_url}
                     className="size-[100px] rounded-md object-cover"
                 />

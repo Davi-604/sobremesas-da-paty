@@ -13,6 +13,7 @@ export const MenuCard = ({ product, onClick }: Props) => {
         >
             <div className="h-[200px] md:h-[270px] w-full overflow-hidden rounded-lg cursor-pointer">
                 <img
+                    loading="lazy"
                     src={product.thumb_image_url}
                     style={{ padding: '0px -8px' }}
                     className="h-full w-full rounded-lg object-cover mb-5 transition-transform duration-300 ease-in hover:scale-125 "

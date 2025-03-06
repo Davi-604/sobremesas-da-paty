@@ -9,8 +9,9 @@ export const ClientAvaliationCard = ({ avaliation }: Props) => {
         <div className="flex flex-col items-center gap-4">
             {avaliation.avatar.trim() !== '' && (
                 <img
+                    loading="lazy"
                     src={avaliation.avatar}
-                    className="size-[100px] rounded-full lg:size-[150px]"
+                    className="size-[100px] rounded-full lg:size-[150px] object-cover"
                 />
             )}
             {avaliation.avatar.trim() === '' && (

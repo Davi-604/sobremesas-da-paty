@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sobremesasdapaty.com.br
+
+# Sitemaps
+Sitemap: https://sobremesasdapaty.com.br/sitemap.xml

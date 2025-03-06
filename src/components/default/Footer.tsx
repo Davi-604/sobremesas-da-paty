@@ -37,20 +37,8 @@ export const Footer = () => {
                         <div className="text-xl font-semibold">Redes Sociais:</div>
                         <SocialMediaItem
                             Icon={FaInstagram}
-                            href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            label="@patriciamagalhaesmedeiros"
-                            isFooterItem
-                        />
-                        <SocialMediaItem
-                            Icon={FaInstagram}
-                            href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            label="@patriciamagalhaesmedeiros"
-                            isFooterItem
-                        />
-                        <SocialMediaItem
-                            Icon={FaInstagram}
-                            href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            label="@patriciamagalhaesmedeiros"
+                            href="https://www.instagram.com/sobremesas.dapaty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            label="@sobremesas.dapaty"
                             isFooterItem
                         />
                     </div>
@@ -66,20 +54,8 @@ export const Footer = () => {
                     <div className="text-xl font-semibold">Redes Sociais:</div>
                     <SocialMediaItem
                         Icon={FaInstagram}
-                        href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        label="@patriciamagalhaesmedeiros"
-                        isFooterItem
-                    />
-                    <SocialMediaItem
-                        Icon={FaInstagram}
-                        href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        label="@patriciamagalhaesmedeiros"
-                        isFooterItem
-                    />
-                    <SocialMediaItem
-                        Icon={FaInstagram}
-                        href="https://www.instagram.com/patriciamagalhaesmedeiros?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                        label="@patriciamagalhaesmedeiros"
+                        href="https://www.instagram.com/sobremesas.dapaty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        label="@sobremesas.dapaty"
                         isFooterItem
                     />
                 </div>
@@ -90,7 +66,7 @@ export const Footer = () => {
                 variants={fadeInLeft}
                 className=" py-5 text-center bg-primary dark:bg-chart-1  "
             >
-                Todos os direitos reservados a Adocia - doces e sobremesas
+                Todos os direitos reservados a Sobremesas da Paty
             </motion.div>
         </footer>
     );

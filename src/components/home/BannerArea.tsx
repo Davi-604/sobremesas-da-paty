@@ -36,6 +36,7 @@ export const BannerArea = () => {
                         {banners.map((banner, index) => (
                             <div key={index}>
                                 <img
+                                    loading="lazy"
                                     src={banner}
                                     alt={`Banner-${index}`}
                                     className="w-full h-[300px] md:h-[400px] lg:h-[570px] object-cover"

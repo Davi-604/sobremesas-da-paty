@@ -41,7 +41,12 @@ export const ClientsAvaliations = () => {
                 variants={fadeInUp}
                 className="mt-20 max-w-[700px] mx-auto"
             >
-                <Slider speed={1000} slidesToShow={1} slidesToScroll={1}>
+                <Slider
+                    speed={1000}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    infinite={avaliations.length > 1}
+                >
                     {avaliations.map((avaliation, index) => (
                         <ClientAvaliationCard avaliation={avaliation} key={index} />
                     ))}

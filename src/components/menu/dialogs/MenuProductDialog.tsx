@@ -52,11 +52,13 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
                             autoplaySpeed={3000}
                         >
                             <img
+                                loading="lazy"
                                 src={product.thumb_image_url}
                                 className="w-full h-[300px] object-cover rounded-t-lg lg:h-[375px]"
                             />
                             {product.extra_images_urls.map((image, index) => (
                                 <img
+                                    loading="lazy"
                                     key={index}
                                     src={image}
                                     alt={`extra-image-${index}`}
@@ -68,6 +70,7 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
                 )}
                 {product.extra_images_urls.length === 0 && (
                     <img
+                        loading="lazy"
                         src={product.thumb_image_url}
                         className="w-full h-[300px] object-cover rounded-t-lg"
                     />
