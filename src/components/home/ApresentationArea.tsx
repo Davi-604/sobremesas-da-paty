@@ -3,12 +3,15 @@ import { SocialMediaItem } from '../default/SocialMediaItem';
 import { motion } from 'framer-motion';
 import { fadeInDown, fadeInLeft, fadeInRight, fadeInUp } from '@/animations/fadeIn';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 export const ApresentationArea = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
     });
+
+    if (typeof window === 'undefined') return;
 
     return (
         <div
@@ -30,8 +33,10 @@ export const ApresentationArea = () => {
                     variants={fadeInLeft}
                     className="max-w-[350px] order-1 md:order-none lg:max-w-[500px] "
                 >
-                    <img
-                        loading="lazy"
+                    <Image
+                        width={window.innerWidth < 768 ? 350 : 500}
+                        height={window.innerWidth < 768 ? 350 : 500}
+                        alt="apresentation-cake"
                         src="/bolo.png"
                         className="w-full h-full object-cover"
                     />

@@ -33,7 +33,7 @@ export const ShowcaseArea = () => {
                 className="grid grid-cols-2 gap-5 mt-10 lg:grid-cols-4"
             >
                 <ShowcaseItem label="Bolos caseiros" img="/bolo-desenho.png" />
-                <ShowcaseItem label="Tortas" img="/tortas-desenho.png" />
+                <ShowcaseItem label="Tortas" img="/torta-desenho.png" />
                 <ShowcaseItem label="Doces de festa" img="/doces-desenho.png" />
                 <ShowcaseItem label="E muito mais..." img="/doces-variados.png" />
             </motion.div>

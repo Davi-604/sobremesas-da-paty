@@ -43,5 +43,14 @@ export const useCartStore = create<CartState>((set) => ({
 
             return { ...state, cart: newCart };
         }),
-    clearCart: () => set({ cart: [] }),
+    clearCart: () =>
+        set((state) => {
+            state.cart = [];
+
+            if (typeof window !== 'undefined') {
+                localStorage.removeItem('cart');
+            }
+
+            return { ...state };
+        }),
 }));
