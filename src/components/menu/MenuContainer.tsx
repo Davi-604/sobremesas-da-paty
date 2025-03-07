@@ -52,13 +52,13 @@ export const MenuContainer = () => {
         <section className="max-w-[1200px] mx-auto px-3 py-10 mt-[102px] lg:mt-[154px]">
             {!loading && products.length !== 0 && (
                 <>
-                    <div className="flex items-center mb-5 mx-3">
+                    <div className="flex  items-center mb-5 ml-3">
                         <FaSearch className="-mr-7 z-50 " />
                         <Input
                             value={searchField}
                             onChange={(e) => setSearchField(e.target.value)}
-                            placeholder="Buscar sobremesas"
-                            className="pl-10 w-3/4 transition-all ease-in-out duration-300 focus:w-full md:w-1/2"
+                            placeholder={`Sobremesa dentro da categoria: '${currentCategory?.name.trim()}'`}
+                            className="pl-10 w-full text-xs transition-all ease-in-out duration-300 focus:w-full md:w-1/2"
                         />
                     </div>
                     {searchField.trim() !== '' && (

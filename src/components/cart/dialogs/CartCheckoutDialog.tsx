@@ -1,6 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { CartClientForm } from '../form/CartClientForm';
 import { useRouter } from 'next/navigation';
+import { IoWarning } from 'react-icons/io5';
 
 type Props = {
     isOpen: boolean;
@@ -13,11 +14,13 @@ export const CartCheckoutDialog = ({ isOpen, onOpenChange }: Props) => {
         <Dialog open={isOpen} onOpenChange={(value) => onOpenChange(value)}>
             <DialogContent className="overflow-y-scroll h-full lg:overflow-y-auto lg:h-auto">
                 <DialogHeader className="mb-3">
-                    <DialogTitle className="text-center text-xl lg:text-2xl">
+                    <DialogTitle className="text-center text-xl mb-5 lg:text-2xl">
                         Dados do cliente
                     </DialogTitle>
-                    <div className="text-destructive text-center font-bold text-sm ">
-                        ** Entregas somente em Patos de Minas - MG **
+                    <div className="flex items-center bg-destructive gap-3 text-xs text-left font-bold p-2 rounded-lg md:text-sm">
+                        <IoWarning size={50} />
+                        As sobremesas não estão necessariamente disponíveis para pronta
+                        entrega, mas sim para serem encomendadas.
                     </div>
                 </DialogHeader>
                 <CartClientForm
