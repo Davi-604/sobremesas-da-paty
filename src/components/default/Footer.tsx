@@ -4,7 +4,7 @@ import { sections } from '@/data/sections';
 import { NavItem } from '../navigation/NavItem';
 import { Logo } from './Logo';
 import { SocialMediaItem } from './SocialMediaItem';
-import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { fadeInLeft } from '@/animations/fadeIn';
@@ -41,6 +41,12 @@ export const Footer = () => {
                             label="@sobremesas.dapaty"
                             isFooterItem
                         />
+                        <SocialMediaItem
+                            Icon={FaFacebook}
+                            href="https://www.facebook.com/profile.php?id=61573642123307"
+                            label={'Sobremesas da Paty'}
+                            isFooterItem
+                        />
                     </div>
                     <div className="hidden w-0.5 bg-white h-[200px] lg:block"></div>
                     <div className="flex flex-col gap-1 max-w-[125px] ">
@@ -57,6 +63,11 @@ export const Footer = () => {
                         href="https://www.instagram.com/sobremesas.dapaty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                         label="@sobremesas.dapaty"
                         isFooterItem
+                    />
+                    <SocialMediaItem
+                        Icon={FaFacebook}
+                        href="https://www.facebook.com/profile.php?id=61573642123307"
+                        label={'Nossa página do Facebook'}
                     />
                 </div>
             </motion.div>

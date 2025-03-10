@@ -1,4 +1,4 @@
-import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { SocialMediaItem } from '../default/SocialMediaItem';
 import { motion } from 'framer-motion';
 import { fadeInDown, fadeInLeft, fadeInRight, fadeInUp } from '@/animations/fadeIn';
@@ -72,6 +72,11 @@ export const ApresentationArea = () => {
                         Icon={FaInstagram}
                         href="https://www.instagram.com/sobremesas.dapaty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                         label={'@sobremesas.dapaty'}
+                    />
+                    <SocialMediaItem
+                        Icon={FaFacebook}
+                        href="https://www.facebook.com/profile.php?id=61573642123307"
+                        label={'Sobremesas da Paty'}
                     />
                 </div>
             </motion.div>
