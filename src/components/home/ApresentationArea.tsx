@@ -24,7 +24,7 @@ export const ApresentationArea = () => {
                 variants={fadeInDown}
                 className="font-bold text-center text-3xl lg:text-4xl lg:-mb-7"
             >
-                Olá, somos a Adocica!
+                Olá, somos a Sobremesas da Paty!
             </motion.div>
             <div className="flex flex-col items-center gap-3 md:flex-row">
                 <motion.div
@@ -47,13 +47,15 @@ export const ApresentationArea = () => {
                     variants={fadeInRight}
                     className="font-base italic text-center mt-10 max-w-[500px] mx-auto md:max-w-[600px] lg:text-xl lg:max-w-[800px] lg:text-left"
                 >
-                    Na Adocica, acreditamos que confeitaria vai muito além de fazer doces:
-                    é sobre criar momentos inesquecíveis. Por isso nossas sobremesas
-                    caseiras são feitas com todo carinho da minha casa para a sua mesa!
+                    Aqui na Sobremesas da Paty, acreditamos que confeitaria vai muito além
+                    de fazer doces: é sobre criar momentos inesquecíveis. Por isso nossas
+                    sobremesas caseiras são feitas com todo carinho da minha casa para a
+                    sua mesa!
                     <br />
                     <br />
-                    Nosso compromisso é oferecer qualidade nas sobremesas, atendimento
-                    impecável e, claro, sabores que encantam.
+                    Nosso compromisso é oferecer a melhor qualidade nas sobremesas,
+                    atendimento impecável e, claro, sabores que estão prontos para te
+                    encantar.
                 </motion.div>
             </div>
             <motion.div
