@@ -68,6 +68,7 @@ export const Footer = () => {
                         Icon={FaFacebook}
                         href="https://www.facebook.com/profile.php?id=61573642123307"
                         label={'Nossa página do Facebook'}
+                        isFooterItem
                     />
                 </div>
             </motion.div>
