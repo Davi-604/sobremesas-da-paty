@@ -29,9 +29,8 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
     };
 
     useEffect(() => {
-        const handlePopState = (event: PopStateEvent) => {
+        const handlePopState = () => {
             if (isOpen) {
-                event.preventDefault();
                 onOpenChange(false);
             }
         };
@@ -41,7 +40,21 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
         return () => {
             window.removeEventListener('popstate', handlePopState);
         };
-    }, []);
+    }, [isOpen, onOpenChange]);
+
+    useEffect(() => {
+        if (isOpen) {
+            window.history.pushState(
+                { dialogOpen: true },
+                '',
+                `${window.location.pathname}?dialog=open`
+            );
+        } else {
+            if (window.history.state && window.history.state.dialogOpen) {
+                window.history.back();
+            }
+        }
+    }, [isOpen]);
 
     return (
         <Dialog
