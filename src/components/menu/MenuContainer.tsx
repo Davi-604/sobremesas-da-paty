@@ -1,7 +1,7 @@
 'use client';
 
 import { Category } from '@/types/Category';
-import { useEffect, useState } from 'react';
+import { KeyboardEvent, useEffect, useState } from 'react';
 import { MenuCategorySelect } from './MenuCategorySelect';
 import { getProducts } from '@/services/products';
 import { Product } from '@/types/Product';
@@ -44,6 +44,12 @@ export const MenuContainer = () => {
         setProducts(req);
     };
 
+    const handleEnterKeyUp = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (e.key.toLowerCase() === 'enter') {
+            (e.target as HTMLInputElement).blur();
+        }
+    };
+
     useEffect(() => {
         handleGetProductsFromCategory();
     }, [currentCategory]);
@@ -58,6 +64,7 @@ export const MenuContainer = () => {
                             value={searchField}
                             onChange={(e) => setSearchField(e.target.value)}
                             placeholder={`Sobremesa dentro da categoria: '${currentCategory?.name.trim()}'`}
+                            onKeyUp={(e) => handleEnterKeyUp(e)}
                             className="pl-10 w-full text-xs transition-all ease-in-out duration-300 focus:w-full md:w-1/2"
                         />
                     </div>

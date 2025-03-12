@@ -46,6 +46,7 @@ export const CartClientInputField = ({
                             value: field.value
                                 ? String(field.value).replace('.', ',')
                                 : '',
+                            type: 'tel',
                         })}
                     />
                 </FormControl>

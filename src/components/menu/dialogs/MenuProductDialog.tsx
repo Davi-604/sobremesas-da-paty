@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CartStaticQuantityHandler } from '@/components/cart/CartStaticQuantityHandler';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCartStore } from '@/stores/cart';
 import { WarningDialog } from '@/components/default/dialogs/WarningDialog';
 
@@ -27,6 +27,21 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
         setIsWarningDialogOpen(true);
         setQuantity(0);
     };
+
+    useEffect(() => {
+        const handlePopState = (event: PopStateEvent) => {
+            if (isOpen) {
+                onOpenChange(false);
+                event.preventDefault();
+            }
+        };
+
+        window.addEventListener('popstate', handlePopState);
+
+        return () => {
+            window.removeEventListener('popstate', handlePopState);
+        };
+    }, [isOpen, onOpenChange]);
 
     return (
         <Dialog
