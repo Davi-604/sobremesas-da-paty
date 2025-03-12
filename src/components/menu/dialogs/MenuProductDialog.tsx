@@ -31,8 +31,8 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
     useEffect(() => {
         const handlePopState = (event: PopStateEvent) => {
             if (isOpen) {
-                onOpenChange(false);
                 event.preventDefault();
+                onOpenChange(false);
             }
         };
 
@@ -41,7 +41,7 @@ export const MenuProductDialog = ({ isOpen, onOpenChange, product }: Props) => {
         return () => {
             window.removeEventListener('popstate', handlePopState);
         };
-    }, [isOpen, onOpenChange]);
+    }, []);
 
     return (
         <Dialog
