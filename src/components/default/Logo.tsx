@@ -29,7 +29,6 @@ export const Logo = ({ small }: Props) => {
         <>
             {logo && !loading && (
                 <img
-                    loading="lazy"
                     onClick={() => router.push('/')}
                     src={logo}
                     alt="Logo"
