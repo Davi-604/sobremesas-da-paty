@@ -8,6 +8,10 @@ import { Footer } from '@/components/default/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const metadata: Metadata = {
+    title: 'Sobremesas da Paty | Doces e sobremesas para a cidade de Patos de Minas',
+};
+
 export default function RootLayout({
     children,
 }: Readonly<{
