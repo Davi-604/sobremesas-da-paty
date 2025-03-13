@@ -67,7 +67,7 @@ export const Footer = () => {
                     <SocialMediaItem
                         Icon={FaFacebook}
                         href="https://www.facebook.com/profile.php?id=61573642123307"
-                        label={'Nossa página do Facebook'}
+                        label={'Sobremesas da Paty'}
                         isFooterItem
                     />
                 </div>

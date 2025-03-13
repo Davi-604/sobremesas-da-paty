@@ -30,7 +30,7 @@ export const ShowcaseArea = () => {
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
                 variants={fadeInUp}
-                className="grid grid-cols-2 gap-5 mt-10 lg:grid-cols-4"
+                className="grid grid-cols-2 items-center justify-center gap-5 mt-10 lg:grid-cols-4"
             >
                 <ShowcaseItem label="Bolos caseiros" img="/bolo-desenho.png" />
                 <ShowcaseItem label="Tortas" img="/torta-desenho.png" />

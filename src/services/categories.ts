@@ -11,5 +11,7 @@ export const getCategories = async (): Promise<Category[]> => {
         throw new Error(error.message);
     }
 
-    return data as Category[];
+    const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
+
+    return sortedData as Category[];
 };
